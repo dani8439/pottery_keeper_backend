@@ -19,6 +19,19 @@ class Api::V1::CollectionsController < ApplicationController
         render json: @collection  
     end 
 
+    def edit 
+        @collection = Collection.find(params[:id])
+    end 
+
+    def update 
+        @collection = Collection.find(params[:id])
+        if @collection.update(collection_params)
+            render json: @collection 
+        else 
+            render json: {error: 'Error updating collection'}
+        end  
+    end 
+
     def destroy
         @collection = Collection.find(params[:id])
         @collection.destroy   
