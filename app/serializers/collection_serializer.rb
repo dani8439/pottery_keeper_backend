@@ -1,3 +1,5 @@
 class CollectionSerializer < ActiveModel::Serializer
-  attributes :id
+  attributes :id, :name
+
+  has_many :pieces 
 end
