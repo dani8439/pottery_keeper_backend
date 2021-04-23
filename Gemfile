@@ -12,6 +12,8 @@ gem 'puma', '~> 4.1'
 
 gem 'rack-cors'
 
+gem 'pry'
+
 gem 'active_model_serializers'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 # gem 'jbuilder', '~> 2.7'
