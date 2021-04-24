@@ -6,6 +6,7 @@ class Api::V1::CollectionsController < ApplicationController
     end 
 
     def create
+        # binding.pry
         @collection = Collection.new(collection_params) 
         if @collection.save 
             render json: @collection 
@@ -40,7 +41,7 @@ class Api::V1::CollectionsController < ApplicationController
     private 
 
     def collection_params
-        params.require(:collection).permit(:name)
+        params.require(:collection).permit(:name, :main_image)
     end 
 
 end
