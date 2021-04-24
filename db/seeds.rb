@@ -9,8 +9,8 @@
 Collection.destroy_all
 Piece.destroy_all 
 
-collection1 = Collection.create(name: "My Pieces")
-collection2 = Collection.create(name: "Wishlist")
+collection1 = Collection.create(name: "My Pieces", main_image: "https://i.pinimg.com/originals/e1/b5/9b/e1b59b0a45a88262932b6ac916bd845e.jpg")
+collection2 = Collection.create(name: "Wishlist", main_image: "https://i.pinimg.com/originals/67/36/e7/6736e7c53916465db8fe94c9a14e320e.jpg")
 
 piece1 = Piece.create(piece_name: "3 Cup Teapot", pattern_name: "Utility", quantity: 2, image_url: "https://i.pinimg.com/originals/9b/8b/fa/9b8bfaea4e81c20ec817a1a63fb4cd17.jpg", collection_id: collection1.id)
 piece2 = Piece.create(piece_name: "Oval Platter", pattern_name: "Cambridge Blue Toast", quantity: 1, image_url: "https://i.pinimg.com/originals/ed/19/c9/ed19c95cfda3d385959c0d8a14eb53df.jpg", collection_id: collection2.id)
