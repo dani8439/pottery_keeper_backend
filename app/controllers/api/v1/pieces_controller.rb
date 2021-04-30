@@ -13,9 +13,9 @@ class Api::V1::PiecesController < ApplicationController
     end 
 
     def create 
-        @piece = @collection.pieces.build(piece_params)
+        @piece = @collection.pieces.new(piece_params)
         if @piece.save 
-            render json: @piece 
+            render json: @collection
         else
             render json: {error: 'Error creating piece'}  
         end 
