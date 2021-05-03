@@ -19,14 +19,16 @@ class Api::V1::CollectionsController < ApplicationController
         render json: @collection  
     end 
 
-    # def edit 
-    #     @collection = Collection.find(params[:id])
-    # end 
+    def edit 
+        @collection = Collection.find(params[:id])
+    end 
 
     def update 
+        binding.pry
         @collection = Collection.find(params[:id])
+        # if @collection.update(name: params["collection"]["name"])
+        # Will update single attribute, but not both? 
         if @collection.update(collection_params)
-            @collection.save
             render json: @collection 
         else 
             render json: {error: 'Error updating collection'}
@@ -41,7 +43,7 @@ class Api::V1::CollectionsController < ApplicationController
     private 
 
     def collection_params
-        params.require(:collection).permit(:name, :main_image)
+        params.require(:collection).permit(:id, :name, :main_image)
     end 
 
 end
