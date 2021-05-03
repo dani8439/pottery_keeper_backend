@@ -6,7 +6,6 @@ class Api::V1::CollectionsController < ApplicationController
     end 
 
     def create
-        # binding.pry
         @collection = Collection.new(collection_params) 
         if @collection.save 
             render json: @collection 
@@ -20,11 +19,12 @@ class Api::V1::CollectionsController < ApplicationController
         render json: @collection  
     end 
 
-    def edit 
-        @collection = Collection.find(params[:id])
-    end 
+    # def edit 
+    #     @collection = Collection.find(params[:id])
+    # end 
 
     def update 
+        binding.pry
         @collection = Collection.find(params[:id])
         if @collection.update(collection_params)
             render json: @collection 
