@@ -24,9 +24,9 @@ class Api::V1::CollectionsController < ApplicationController
     # end 
 
     def update 
-        binding.pry
         @collection = Collection.find(params[:id])
         if @collection.update(collection_params)
+            @collection.save
             render json: @collection 
         else 
             render json: {error: 'Error updating collection'}
