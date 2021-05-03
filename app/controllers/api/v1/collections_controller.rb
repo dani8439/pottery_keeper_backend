@@ -19,14 +19,15 @@ class Api::V1::CollectionsController < ApplicationController
         render json: @collection  
     end 
 
-    def edit 
-        @collection = Collection.find(params[:id])
-    end 
+    # def edit 
+    #     @collection = Collection.find(params[:id])
+    # end 
 
     def update 
-        binding.pry
+        # binding.pry
         @collection = Collection.find(params[:id])
         # if @collection.update(name: params["collection"]["name"])
+        # if @collection.update(main_image: params["collection"]["main_image"])
         # Will update single attribute, but not both? 
         if @collection.update(collection_params)
             render json: @collection 
