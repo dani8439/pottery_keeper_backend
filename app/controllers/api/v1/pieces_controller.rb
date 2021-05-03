@@ -35,9 +35,10 @@ class Api::V1::PiecesController < ApplicationController
     end 
 
     def destroy 
-        # not sure if correct. 
-        @piece = Piece.find(params[:id])
+        @piece = Piece.find(params["id"])
+        @collection = Collection.find(@piece.collection_id)
         @piece.destroy  
+        render json: @collection
     end  
 
     private 
