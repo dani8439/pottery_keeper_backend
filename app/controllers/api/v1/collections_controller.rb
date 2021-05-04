@@ -24,8 +24,8 @@ class Api::V1::CollectionsController < ApplicationController
     # end 
 
     def update 
-        # binding.pry
         @collection = Collection.find(params[:id])
+        # binding.pry
         # if @collection.update(name: params["collection"]["name"])
         # if @collection.update(main_image: params["collection"]["main_image"])
         # Will update single attribute, but not both? 
