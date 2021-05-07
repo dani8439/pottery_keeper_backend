@@ -21,9 +21,9 @@ class Api::V1::PiecesController < ApplicationController
         end 
     end 
 
-    def edit
-        @piece = Piece.find(params[:id]) 
-    end 
+    # def edit
+    #     @piece = Piece.find(params[:id]) 
+    # end 
 
     def update 
         @piece = Piece.find(params[:id])
@@ -49,7 +49,7 @@ class Api::V1::PiecesController < ApplicationController
 
 
     def piece_params
-        params.require(:piece).permit(:piece_name, :pattern_name, :quantity, :image_url, :collection_id) 
+        params.require(:piece).permit(:id, :piece_name, :pattern_name, :quantity, :image_url, :collection_id) 
 
     end 
 end
