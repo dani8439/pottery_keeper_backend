@@ -28,7 +28,7 @@ class Api::V1::PiecesController < ApplicationController
     def update 
         @piece = Piece.find(params[:id])
         if @piece.update(piece_params)
-            render json @piece 
+            render json: @piece 
         else 
             render json: {error: 'Error creating piece'}
         end 
