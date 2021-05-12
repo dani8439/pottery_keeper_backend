@@ -25,11 +25,8 @@ class Api::V1::CollectionsController < ApplicationController
 
     def update 
         @collection = Collection.find(params[:id])
-        # binding.pry
-        # if @collection.update(name: params["collection"]["name"])
-        # if @collection.update(main_image: params["collection"]["main_image"])
-        # Will update single attribute, but not both? 
         if @collection.update(collection_params)
+            # puts @collection.inspect
             render json: @collection 
         else 
             render json: {error: 'Error updating collection'}
