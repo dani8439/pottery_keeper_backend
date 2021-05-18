@@ -4,7 +4,7 @@ class Api::V1::PiecesController < ApplicationController
     def index
         @pieces = Piece.all
         # @pieces = @collection.pieces 
-        render json: PieceSerializer.new(@pieces)  
+        render json: @pieces
     end 
 
     def show
@@ -14,9 +14,12 @@ class Api::V1::PiecesController < ApplicationController
     end 
 
     def create 
+        puts params.inspect
+        # @piece = @collection.pieces.new(piece_params)
+        @collection = Collection.find_by(params[:collection_id])
         @piece = @collection.pieces.new(piece_params)
         if @piece.save 
-            render json: @collection
+            render json: @piece
         else
             render json: {error: 'Error creating piece'}  
         end 
@@ -40,6 +43,7 @@ class Api::V1::PiecesController < ApplicationController
         @collection = Collection.find(@piece.collection_id)
         @piece.destroy  
         render json: @collection
+        # render json: @piece
     end  
 
     private 
