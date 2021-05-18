@@ -14,10 +14,10 @@ class Api::V1::PiecesController < ApplicationController
     end 
 
     def create 
-        puts params.inspect
+        # binding.pry
         # @piece = @collection.pieces.new(piece_params)
         @collection = Collection.find_by(params[:collection_id])
-        @piece = @collection.pieces.new(piece_params)
+        @piece = @collection.pieces.build(piece_params)
         if @piece.save 
             render json: @piece
         else
