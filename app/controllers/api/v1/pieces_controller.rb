@@ -1,9 +1,10 @@
 class Api::V1::PiecesController < ApplicationController
-    before_action :set_collection
+    # before_action :set_collection
 
     def index
-        @pieces = @collection.pieces 
-        render json: @pieces  
+        @pieces = Piece.all
+        # @pieces = @collection.pieces 
+        render json: PieceSerializer.new(@pieces)  
     end 
 
     def show
@@ -43,9 +44,9 @@ class Api::V1::PiecesController < ApplicationController
 
     private 
 
-    def set_collection
-        @collection = Collection.find(params[:collection_id])
-    end 
+    # def set_collection
+    #     @collection = Collection.find(params[:collection_id])
+    # end 
 
 
     def piece_params
