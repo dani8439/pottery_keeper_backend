@@ -13,6 +13,7 @@ class Api::V1::PiecesController < ApplicationController
     end 
 
     def create 
+        # binding.pry
         @piece = @collection.pieces.new(piece_params)
         if @piece.save 
             render json: @collection
