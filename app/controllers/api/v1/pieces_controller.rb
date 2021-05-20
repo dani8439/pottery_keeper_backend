@@ -1,9 +1,10 @@
 class Api::V1::PiecesController < ApplicationController
-    before_action :set_collection
+    # before_action :set_collection
 
     def index
-        @pieces = @collection.pieces 
-        render json: @pieces  
+        @pieces = Piece.all
+        # @pieces = @collection.pieces 
+        render json: @pieces
     end 
 
     def show
@@ -14,7 +15,15 @@ class Api::V1::PiecesController < ApplicationController
 
     def create 
         # binding.pry
+<<<<<<< HEAD
         # puts piece_params.inspect 
+=======
+#         puts piece_params.inspect
+        # @piece = @collection.pieces.new(piece_params)
+        # @collection = Collection.find_by(params[:collection][:id])
+        # @collection = Collection.find_by(params[:collection_id])
+        # @piece = @collection.pieces.build(piece_params)
+>>>>>>> 6cfc673fdb32b270f070bbee88baabef11303174
         @piece = Piece.new(piece_params)
         if @piece.save 
             render json: @piece.collection
@@ -41,13 +50,14 @@ class Api::V1::PiecesController < ApplicationController
         @collection = Collection.find(@piece.collection_id)
         @piece.destroy  
         render json: @collection
+        # render json: @piece
     end  
 
     private 
 
-    def set_collection
-        @collection = Collection.find(params[:collection_id])
-    end 
+    # def set_collection
+    #     @collection = Collection.find(params[:collection_id])
+    # end 
 
 
     def piece_params
