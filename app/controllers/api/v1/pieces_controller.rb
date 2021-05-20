@@ -14,13 +14,15 @@ class Api::V1::PiecesController < ApplicationController
     end 
 
     def create 
-        binding.pry
+        # binding.pry
+        puts piece_params.inspect
         # @piece = @collection.pieces.new(piece_params)
         # @collection = Collection.find_by(params[:collection][:id])
-        @collection = Collection.find_by(params[:collection_id])
-        @piece = @collection.pieces.build(piece_params)
+        # @collection = Collection.find_by(params[:collection_id])
+        # @piece = @collection.pieces.build(piece_params)
+        @piece = Piece.new(piece_params)
         if @piece.save 
-            render json: @piece
+            render json: @piece.collection
         else
             render json: {error: 'Error creating piece'}  
         end 
