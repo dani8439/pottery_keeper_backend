@@ -15,7 +15,7 @@ class Api::V1::PiecesController < ApplicationController
 
     def create 
         # binding.pry
-        puts piece_params.inspect
+#         puts piece_params.inspect
         # @piece = @collection.pieces.new(piece_params)
         # @collection = Collection.find_by(params[:collection][:id])
         # @collection = Collection.find_by(params[:collection_id])
