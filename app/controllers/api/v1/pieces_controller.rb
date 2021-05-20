@@ -1,9 +1,10 @@
 class Api::V1::PiecesController < ApplicationController
-    before_action :set_collection
+    # before_action :set_collection
 
     def index
-        @pieces = @collection.pieces 
-        render json: @pieces  
+        @pieces = Piece.all
+        # @pieces = @collection.pieces 
+        render json: @pieces
     end 
 
     def show
@@ -14,9 +15,14 @@ class Api::V1::PiecesController < ApplicationController
 
     def create 
         # binding.pry
-        @piece = @collection.pieces.new(piece_params)
+#         puts piece_params.inspect
+        # @piece = @collection.pieces.new(piece_params)
+        # @collection = Collection.find_by(params[:collection][:id])
+        # @collection = Collection.find_by(params[:collection_id])
+        # @piece = @collection.pieces.build(piece_params)
+        @piece = Piece.new(piece_params)
         if @piece.save 
-            render json: @collection
+            render json: @piece.collection
         else
             render json: {error: 'Error creating piece'}  
         end 
@@ -29,9 +35,9 @@ class Api::V1::PiecesController < ApplicationController
     def update 
         @piece = Piece.find(params[:id])
         if @piece.update(piece_params)
-            render json: @piece 
+            render json: @piece.collection
         else 
-            render json: {error: 'Error creating piece'}
+            render json: {error: 'Error updating piece'}
         end 
     end 
 
@@ -40,13 +46,14 @@ class Api::V1::PiecesController < ApplicationController
         @collection = Collection.find(@piece.collection_id)
         @piece.destroy  
         render json: @collection
+        # render json: @piece
     end  
 
     private 
 
-    def set_collection
-        @collection = Collection.find(params[:collection_id])
-    end 
+    # def set_collection
+    #     @collection = Collection.find(params[:collection_id])
+    # end 
 
 
     def piece_params
