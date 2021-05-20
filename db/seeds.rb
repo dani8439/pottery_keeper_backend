@@ -21,7 +21,7 @@ piece6 = Piece.create(piece_name: "French Bowl", pattern_name: "Cambridge Blue T
 piece7 = Piece.create(piece_name: "3 Cup Teapot", pattern_name: "Cambridge Blue Toast", quantity: 1, image_url: "https://i.pinimg.com/originals/a1/e9/45/a1e945bc29466b0c0bdac2b39dd25939.jpg", collection_id: collection2.id)
 piece8 = Piece.create(piece_name: "Butter Dish", pattern_name: "Utility", quantity: 1, image_url: "https://www.picclickimg.com/d/l400/pict/133529897128_/Emma-Bridgewater-Utility-Butter-Dish.jpg", collection_id: collection2.id)
 piece9 = Piece.create(piece_name: "Dollies Tea Set", pattern_name: "Tea Time Toast", quantity: 1, image_url: "https://i.pinimg.com/originals/87/db/82/87db821cc374578c33c87a94b6328772.jpg", collection_id: collection1.id)
-piece10 = Piece.create(piece_name: "Dollies Jug", pattern_name: "Black Toast", quantity: 1, image_url: "https://thumbs.worthpoint.com/zoom/images1/360/0914/13/emma-bridgewater-tiny-toast-marmalade_360_26fbb483517a5335967550bd40d906a6.jpg", collection_id: collection1.id)
+piece10 = Piece.create(piece_name: "Dollies Jug", pattern_name: "Black Toast", quantity: 1, image_url: "https://www.picclickimg.com/d/l400/pict/333909697758_/Emma-Bridgewater-Dollies-Tiny-Toast-milk-jug-Black.jpg", collection_id: collection1.id)
 piece11 = Piece.create(piece_name: "Dollies teacup", pattern_name: "Black Toast", quantity: 2, image_url: "https://i.ebayimg.com/thumbs/images/g/0eIAAOSwOCdfVjXE/s-l225.jpg", collection_id: collection2.id)
 piece12 = Piece.create(piece_name: "4 Cup Teapot", pattern_name: "Love & Kisses", quantity: 1, image_url: "https://i.pinimg.com/originals/03/ac/1c/03ac1c71a8a035c04eabcb7553e56284.jpg", collection_id: collection2.id)
 
