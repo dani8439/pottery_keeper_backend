@@ -1,7 +1,7 @@
 # README
 
 # Pottery Keeper
-A single page web application allowing a user to create a detailed database of pottery pieces. A user may create collections, edit collections, add pieces to collections, edit, and delete pieces in collections. 
+A Rails API, and React App allowing a user to create a detailed database of pottery pieces. A user may create collections, edit collections, add pieces to collections, edit, and delete pieces in collections. 
 
 The app is built using a Rails API backend, and a React frontend, created using Create-React-App. The Rails API was created with a Postgres database.
 
