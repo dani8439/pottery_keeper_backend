@@ -43,6 +43,15 @@ piece28 = Piece.create(piece_name: "1.5 Pint Jug", pattern_name: "Cambridge Blue
 piece29 = Piece.create(piece_name: "Pudding Basin", pattern_name: "Utility", quantity: 1, image_url: "https://i.pinimg.com/originals/74/46/c0/7446c00b4cd0fe6c3edb0e4646777981.jpg", collection_id: collection1.id)
 piece30 = Piece.create(piece_name: "Pudding Basin", pattern_name: "Cambridge Blue Toast", quantity: 1, image_url: "https://www.picclickimg.com/d/l400/pict/383464077279_/Emma-Bridgewater-Toast-Marmelade-Cambridge-Blue.jpg", collection_id: collection1.id)
 piece31 = Piece.create(piece_name: "Dollies 4.5 Inch Plate", pattern_name: "Utility", quantity: 2, image_url: "https://i.pinimg.com/originals/54/ee/ad/54eead6d4ef8d29ecec1d1834ce85076.jpg", collection_id: collection1.id)
+piece32 = Piece.create(piece_name: "3 Cup Teapot", pattern_name: "Blue Toast", quantity: 1, image_url: "https://i.pinimg.com/originals/d1/8a/e3/d18ae385fb98c60e6e0782af9c366bd0.jpg", collection_id: collection1.id)
+piece33 = Piece.create(piece_name: "10.5 Inch Dinner Plate", pattern_name: "Utility", quantity: 5, image_url: "https://images.replacements.com/images/images2/china/B/P0000304306S0002T2.jpg", collection_id: collection1.id)
+piece34 = Piece.create(piece_name: "8.5 Inch Plate", pattern_name: "Utility", quantity: 4, image_url: "https://www.picclickimg.com/d/l400/pict/302691472509_/Rare-discontinued-blue-Utility-side-plate-dia-85.jpg", collection_id: collection1.id)
+piece35 = Piece.create(piece_name: "8.5 Inch Plate", pattern_name: "Cambridge Blue Toast", quantity: 2, image_url: "https://i.pinimg.com/564x/ce/f8/cd/cef8cd10e200f02720abba9c9da877a5.jpg", collection_id: collection1.id)
+piece36 = Piece.create(piece_name: "10.5 Inch Dinner Plate", pattern_name: "Cambridge Blue Toast", quantity: 1, image_url: "https://i.pinimg.com/564x/6d/71/c0/6d71c01e874a860abf4746e78065d444.jpg", collection_id: collection1.id)
+piece37 = Piece.create(piece_name: "Dollies Teapot", pattern_name: "Black Toast", quantity: 1, image_url: "https://i.ebayimg.com/thumbs/images/g/Hd8AAOSwUuRgMi4W/s-l300.jpg", collection_id: collection1.id)
+piece38 = Piece.create(piece_name: "6.5 Inch Plate", pattern_name: "Utility", quantity: 7, image_url: "https://images.replacements.com/cdn-cgi/image/format=auto/https://images.replacements.com/images/images2/china/B/P0000304306S0005T2.jpg", collection_id: collection1.id)
+piece39 = Piece.create(piece_name: "Soup plate", pattern_name: "Utility", quantity: 7, image_url: "https://images.replacements.com/cdn-cgi/image/format=auto/https://images.replacements.com/images/images2/china/B/P0000304306S0004T2.jpg", collection_id: collection1.id)
+
 
 
 
