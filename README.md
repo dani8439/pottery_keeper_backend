@@ -5,8 +5,11 @@ A Rails API, and React App allowing a user to create a detailed database of pott
 
 The app is built using a Rails API backend, and a React frontend, created using Create-React-App. The Rails API was created with a Postgres database.
 
+# Live Demo
+Pottery Keeper's backend and frontend are both hosted on Heroku. If you would like to see a live version of the site, and play around, please click [here](https://pottery-keeper-api.herokuapp.com/collections).
+
 # How to use it
-The frontend is located here: https://github.com/dani8439/pottery_keeper_frontend
+The frontend is located [here](https://github.com/dani8439/pottery_keeper_frontend)
 
 1. Clone both repositories to your computer.
 2. CD into `pottery_keeper_backend`.
